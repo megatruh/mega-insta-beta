@@ -3,11 +3,11 @@ Instagram Image and Video Downloader<br/>
 Original By Me
 
 ### Requirements
-• Python 3.x
-  • requests
-  • bs4
-  • json
-  • clint
+• Python 3.x <br/>
+  • requests <br/>
+  • bs4 <br/>
+  • json <br/>
+  • clint <br/>
   • urllib
 #### Uses
 ```
