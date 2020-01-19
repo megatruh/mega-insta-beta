@@ -20,4 +20,4 @@ cd mega-insta
 python mega-insta.py
 ```
 #### Contact Me
-*.[Facebook](https://www.facebook.com/megatruh.al
+*.[Facebook](https://www.facebook.com/megatruh.al)
