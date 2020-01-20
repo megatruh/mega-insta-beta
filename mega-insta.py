@@ -66,46 +66,46 @@ print('Menu Download : \n'+
 choice = int(input('  >  '))
 
 try:
-	os.mkdir('instagram-dl')
+	os.mkdir('mega-insta')
 except:
 	print('',end='')
 
 if choice == 1:
 	try:
 		try:
-			os.mkdir('instagram-dl/%s'%(uname))
-			os.mkdir('instagram-dl/%s/pictures'%(uname))
+			os.mkdir('mega-insta/%s'%(uname))
+			os.mkdir('mega-insta/%s/pictures'%(uname))
 		except:
 			try:
-				os.mkdir('instagram-dl/%s/pictures'%(uname))				#LINUX
+				os.mkdir('mega-insta/%s/pictures'%(uname))				#LINUX
 			except:
 				print('')
 	except:
 		try:
-			os.mkdirs('instagram-dl\\%s'%(uname))
-			os.mkdirs('instagram-dl\\%s\\pictures'%(uname))
+			os.mkdirs('mega-insta\\%s'%(uname))
+			os.mkdirs('mega-insta\\%s\\pictures'%(uname))
 		except:
 			try:
-				os.mkdirs('instagram-dl\\%s\\pictures'%(uname))				#WINDOWS
+				os.mkdirs('mega-insta\\%s\\pictures'%(uname))				#WINDOWS
 			except:
 				print('')
 elif choice == 2:
 	try:
 		try:
-			os.mkdir('instagram-dl/%s'%(uname))
-			os.mkdir('instagram-dl/%s/videos'%(uname))
+			os.mkdir('mega-insta/%s'%(uname))
+			os.mkdir('mega-insta/%s/videos'%(uname))
 		except:
 			try:
-				os.mkdir('instagram-dl/%s/videos'%(uname))					#LINUX
+				os.mkdir('mega-insta/%s/videos'%(uname))					#LINUX
 			except:
 				print('')
 	except:
 		try:
-			os.mkdirs('instagram-dl\\%s'%(uname))
-			os.mkdirs('instagram-dl\\%s\\videos'%(uname))
+			os.mkdirs('mega-insta\\%s'%(uname))
+			os.mkdirs('mega-insta\\%s\\videos'%(uname))
 		except:
 			try:
-				os.mkdirs('instagram-dl\\ %s\\ videos'%(uname))				#WINDOWS
+				os.mkdirs('mega-insta\\ %s\\ videos'%(uname))				#WINDOWS
 			except:
 				print('')
 
@@ -118,13 +118,13 @@ for link in alinks:
 			image = instaimg(url)
 			total_length = int(image.headers.get('content-length'))
 			try :
-				with open ('instagram-dl/%s/pictures/%s%s.jpg'%(uname,uname,i),'wb+') as p:
+				with open ('mega-insta/%s/pictures/%s%s.jpg'%(uname,uname,i),'wb+') as p:
 				    for alf in progress.bar(image.iter_content(chunk_size=1024), expected_size=(total_length/1024) + 1):
 				        if alf:
 				            p.write(alf)
 				            p.flush()
 			except:
-				with open ('instagram-dl\\%s\\pictures\\%s%s.jpg'%(uname,uname,i),'wb+') as p:
+				with open ('mega-insta\\%s\\pictures\\%s%s.jpg'%(uname,uname,i),'wb+') as p:
 				    for alf in progress.bar(image.iter_content(chunk_size=1024), expected_size=(total_length/1024) + 1):
 				        if alf:
 				            p.write(alf)
@@ -141,13 +141,13 @@ for link in alinks:
 			video = instavid(url)
 			total_length = int(video.headers.get('content-length'))
 			try:
-				with open ('instagram-dl/%s/videos/%s%s.mp4'%(uname,uname,i),'wb+') as p:
+				with open ('mega-insta/%s/videos/%s%s.mp4'%(uname,uname,i),'wb+') as p:
 					for alf in progress.bar(video.iter_content(chunk_size=1024), expected_size=(total_length/1024) +1):
 						if alf:
 							p.write(alf)
 							p.flush()
 			except:
-				with open ('instagram-dl\\%s\\videos\\%s%s.mp4'%(uname,uname,i),'wb+') as p:
+				with open ('mega-insta\\%s\\videos\\%s%s.mp4'%(uname,uname,i),'wb+') as p:
 					for alf in progress.bar(video.iter_content(chunk_size=1024), expected_size=(total_length/1024) +1):
 						if alf:
 							p.write(alf)
